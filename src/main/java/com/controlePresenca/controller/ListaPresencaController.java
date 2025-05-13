@@ -41,14 +41,14 @@ public class ListaPresencaController {
     }
 
     @Operation(summary = "Listar todas as listas de presença")
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<ListaPresenca>> getAllListasPresenca() {
         List<ListaPresenca> listas = listaPresencaService.getAllListasPresenca();
         return ResponseEntity.ok(listas);
     }
 
     @Operation(summary = "Criar nova lista de presença")
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<ListaPresenca> criarListaPresenca(@RequestBody @Valid ListaPresenca listaPresenca) {
         ListaPresenca criada = listaPresencaService.salvarListaPresenca(listaPresenca);
         return ResponseEntity.status(HttpStatus.CREATED).body(criada);

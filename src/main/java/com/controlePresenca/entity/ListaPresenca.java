@@ -15,12 +15,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "listaPresenca")
 public class ListaPresenca {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String cargo;
 	private String empresa;
-	
 }
